@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CT do Gasolina - Informações e Preços</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-left">
+                <a href="#precos">Preços</a>
+                <a href="#melhores-tempos">Melhores Tempos</a>
+                <a href="#ranking-geral">Ranking Geral</a>
+                <a href="#horarios">Horários</a>
+            </div>
+            <div class="nav-center">
+                <h1 class="logo">CT do Gasolina</h1>
+            </div>
+            <div class="nav-right">
+                <a href="#informacoes">Informações</a>
+                <a href="#contato">Contato</a>
+                <a href="https://www.instagram.com/ctgasolina_motocross?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="nav-instagram" aria-label="Instagram">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </a>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+        <div class="mobile-menu">
+            <a href="#precos">Preços</a>
+            <a href="#melhores-tempos">Melhores Tempos</a>
+            <a href="#ranking-geral">Ranking Geral</a>
+            <a href="#horarios">Horários</a>
+            <a href="#informacoes">Informações</a>
+            <a href="#contato">Contato</a>
+            <a href="https://www.instagram.com/ctgasolina_motocross?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="mobile-nav-instagram">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg> Instagram
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">O Melhor CT de Motocross da Região</h1>
+            <p class="hero-subtitle">Informações completas sobre preços, horários e os melhores tempos já registrados em nosso centro de treinamento profissional.</p>
+            <button class="btn-hero">Ver Preços</button>
+        </div>
+        <div class="hero-gallery">
+            <div class="gallery-item">
+                <img src="imagens/piloto-acao-pista.png" alt="Piloto em ação na pista">
+            </div>
+            <div class="gallery-item">
+                <img src="imagens/piloto-salto-ar.png" alt="Piloto fazendo salto no ar">
+            </div>
+            <div class="gallery-item">
+                <img src="imagens/piloto-crianca-motos.png" alt="Piloto e criança com motos">
+            </div>
+            <div class="gallery-item">
+                <img src="imagens/piloto-vitoria.jpg" alt="Piloto com gesto de vitória">
+            </div>
+            <div class="gallery-item">
+                <img src="imagens/piloto-manobra.jpg" alt="Piloto fazendo manobra">
+            </div>
+        </div>
+    </section>
+
+    <!-- Preços Section -->
+    <section id="precos" class="pricing-section">
+        <div class="section-header">
+            <h2>Preços e Pacotes</h2>
+            <p>Escolha o plano ideal para sua prática de motocross. Todos os preços incluem acesso completo à pista e equipamentos de segurança.</p>
+        </div>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3>Pacote Básico</h3>
+                    <div class="price">
+                        <span class="currency">R$</span>
+                        <span class="amount">50</span>
+                        <span class="period">/ Day Use</span>
+                    </div>
+                </div>
+                <ul class="pricing-features">
+                    <li>✓ Acesso à pista Day Use</li>
+                    <li>✓ Estacionamento gratuito</li>
+                    <li>✓ Duchas disponíveis</li>
+                    <li>✓ Banheiros disponíveis</li>
+                    <li>✓ Pista gradeada</li>
+                    <li>✓ Bar aberto</li>
+                </ul>
+                <div class="pricing-info">
+                    <p>Pague na hora - não é necessário reserva!</p>
+                </div>
+            </div>
+            
+            <div class="pricing-card featured">
+                <div class="pricing-header">
+                    <h3>Pacote Premium</h3>
+                    <div class="price">
+                        <span class="currency">R$</span>
+                        <span class="amount">70</span>
+                        <span class="period">/ Day Use</span>
+                    </div>
+                    <div class="popular-badge">Mais Popular</div>
+                </div>
+                <ul class="pricing-features">
+                    <li>✓ Acesso à pista Day Use</li>
+                    <li>✓ Estacionamento gratuito</li>
+                    <li>✓ Duchas disponíveis</li>
+                    <li>✓ Banheiros disponíveis</li>
+                    <li>✓ Pista gradeada</li>
+                    <li>✓ Bar aberto</li>
+                </ul>
+                <div class="pricing-info">
+                    <p>Pague na hora - não é necessário reserva!</p>
+                </div>
+            </div>
+            
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3>Pacote Mensal</h3>
+                    <div class="price">
+                        <span class="currency">R$</span>
+                        <span class="amount">300</span>
+                        <span class="period">/ mês</span>
+                    </div>
+                </div>
+                <ul class="pricing-features">
+                    <li>✓ Acesso à pista Day Use</li>
+                    <li>✓ Estacionamento gratuito</li>
+                    <li>✓ Duchas disponíveis</li>
+                    <li>✓ Banheiros disponíveis</li>
+                    <li>✓ Pista gradeada</li>
+                    <li>✓ Bar aberto</li>
+                </ul>
+                <div class="pricing-info">
+                    <p>Pague na hora - não é necessário reserva!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Melhores Tempos Section -->
+    <section id="melhores-tempos" class="times-section">
+        <div class="section-header">
+            <h2>Melhores Tempos da Pista</h2>
+            <p>Confira os recordes estabelecidos pelos melhores pilotos em nossa pista. Desafie-se a bater esses tempos!</p>
+        </div>
+        <div class="times-grid">
+            <div class="time-card">
+                <div class="time-header">
+                    <h3>Classe 450cc</h3>
+                    <div class="time-record">1:18.32</div>
+                </div>
+                <div class="pilot-info">
+                    <img src="imagens/Captura de tela 2025-09-04 223353.png" alt="João Manoel">
+                    <div class="pilot-details">
+                        <h4>João Manoel</h4>
+                        <p>Data: 22/11/2024</p>
+                        <p>Moto: Yamaha YZ450F</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="time-card">
+                <div class="time-header">
+                    <h3>Classe 450cc</h3>
+                    <div class="time-record">1:19.32</div>
+                </div>
+                <div class="pilot-info">
+                    <img src="imagens/Captura de tela 2025-09-04 223601.png" alt="Manchinha">
+                    <div class="pilot-details">
+                        <h4>Manchinha</h4>
+                        <p>Data: 15/12/2024</p>
+                        <p>Moto: Honda CRF450R</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="time-card">
+                <div class="time-header">
+                    <h3>Classe 250cc</h3>
+                    <div class="time-record">1:20.32</div>
+                </div>
+                <div class="pilot-info">
+                    <img src="imagens/piloto-salto-ar.png" alt="Ana Oliveira">
+                    <div class="pilot-details">
+                        <h4>Ana Oliveira</h4>
+                        <p>Data: 10/12/2024</p>
+                        <p>Moto: KTM 250 SX</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="time-card">
+                <div class="time-header">
+                    <h3>Classe 250cc</h3>
+                    <div class="time-record">1:21.32</div>
+                </div>
+                <div class="pilot-info">
+                    <img src="imagens/piloto-acao-pista.png" alt="Murilo Rezende">
+                    <div class="pilot-details">
+                        <h4>Murilo Rezende</h4>
+                        <p>Data: 08/12/2024</p>
+                        <p>Moto: Honda CRF250R</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ranking Geral Section -->
+    <section id="ranking-geral" class="ranking-section">
+        <div class="section-header">
+            <h2>Ranking Geral da Pista</h2>
+            <p>Top 10 pilotos com os melhores tempos de todos os tempos em nossa pista. Quem será o próximo a entrar para a história?</p>
+        </div>
+        <div class="ranking-table">
+            <div class="ranking-header">
+                <div class="rank-col">Posição</div>
+                <div class="pilot-col">Piloto</div>
+                <div class="time-col">Melhor Tempo</div>
+                <div class="class-col">Classe</div>
+                <div class="date-col">Data</div>
+            </div>
+            <div class="ranking-row top-3">
+                <div class="rank-col">🥇 1º</div>
+                <div class="pilot-col">
+                    <img src="imagens/Captura de tela 2025-09-04 223353.png" alt="Carlos Santos">
+                    <span>João Manoel</span>
+                </div>
+                <div class="time-col">1:18.32</div>
+                <div class="class-col">450cc</div>
+                <div class="date-col">22/11/2024</div>
+            </div>
+            <div class="ranking-row top-3">
+                <div class="rank-col">🥈 2º</div>
+                <div class="pilot-col">
+                    <img src="imagens/Captura de tela 2025-09-04 223601.png" alt="João Silva">
+                    <span>Manchinha</span>
+                </div>
+                <div class="time-col">1:19.32</div>
+                <div class="class-col">450cc</div>
+                <div class="date-col">15/12/2024</div>
+            </div>
+            <div class="ranking-row top-3">
+                <div class="rank-col">🥉 3º</div>
+                <div class="pilot-col">
+                    <img src="imagens/piloto-salto-ar.png" alt="Pedro Costa">
+                    <span>Ana Oliveira</span>
+                </div>
+                <div class="time-col">1:20.32</div>
+                <div class="class-col">250cc</div>
+                <div class="date-col">10/12/2024</div>
+            </div>
+            <div class="ranking-row">
+                <div class="rank-col">4º</div>
+                <div class="pilot-col">
+                    <img src="imagens/piloto-acao-pista.png" alt="Ana Oliveira">
+                    <span>Murilo Rezende</span>
+                </div>
+                <div class="time-col">1:21.32</div>
+                <div class="class-col">250cc</div>
+                <div class="date-col">08/12/2024</div>
+            </div>
+            <div class="ranking-row">
+                <div class="rank-col">5º</div>
+                <div class="pilot-col">
+                    <img src="imagens/piloto-crianca-motos.png" alt="Roberto Lima">
+                    <span>Roberto Lima</span>
+                </div>
+                <div class="time-col">1:22.32</div>
+                <div class="class-col">250cc</div>
+                <div class="date-col">05/12/2024</div>
+            </div>
+            <div class="ranking-row">
+                <div class="rank-col">6º</div>
+                <div class="pilot-col">
+                    <img src="imagens/Captura de tela 2025-09-04 223447.png" alt="Fernando Alves">
+                    <span>Fernando Alves</span>
+                </div>
+                <div class="time-col">1:23.32</div>
+                <div class="class-col">Amador</div>
+                <div class="date-col">03/12/2024</div>
+            </div>
+            <div class="ranking-row">
+                <div class="rank-col">7º</div>
+                <div class="pilot-col">
+                    <img src="imagens/Captura de tela 2025-09-04 224301.png" alt="Lucas Mendes">
+                    <span>Lucas Mendes</span>
+                </div>
+                <div class="time-col">1:24.32</div>
+                <div class="class-col">250cc</div>
+                <div class="date-col">01/12/2024</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Horários Section -->
+    <section id="horarios" class="schedule-section">
+        <div class="section-header">
+            <h2>Horários de Funcionamento</h2>
+            <p>Confira nossos horários e venha treinar no horário mais conveniente para você.</p>
+        </div>
+        <div class="schedule-grid">
+            <div class="schedule-card">
+                <h3>Quarta-Feira</h3>
+                <div class="schedule-times">
+                    <div class="time-slot">
+                        <span class="time">08:00 - 12:00</span>
+                        <span class="status open">Aberto</span>
+                    </div>
+                    <div class="time-slot">
+                        <span class="time">14:00 - 18:00</span>
+                        <span class="status open">Aberto</span>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="schedule-card">
+                <h3>Sábados</h3>
+                <div class="schedule-times">
+                    <div class="time-slot">
+                        <span class="time">10:00 - 12:00</span>
+                        <span class="status open">Aberto</span>
+                    </div>
+                    <div class="time-slot">
+                        <span class="time">13:00 - 19:00</span>
+                        <span class="status open">Aberto</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="schedule-card">
+                <h3>Domingos</h3>
+                <div class="schedule-times">
+                    <div class="time-slot">
+                        <span class="time">10:00 - 14:00</span>
+                        <span class="status open">Aberto</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Informações Adicionais -->
+    <section id="informacoes" class="info-section">
+        <div class="section-header">
+            <h2>Informações Importantes</h2>
+            <p>Tudo que você precisa saber antes de vir treinar em nossa pista.</p>
+        </div>
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>Equipamentos Obrigatórios</h3>
+                <ul>
+                    <li>Capacete certificado</li>
+                    <li>Luvas de motocross</li>
+                    <li>Botas de motocross</li>
+                    <li>Joelheiras e cotoveleiras</li>
+                    <li>Protetor de peito</li>
+                </ul>
+            </div>
+            
+            <div class="info-card">
+                <h3>Regras da Pista</h3>
+                <ul>
+                    <li>Respeitar a sinalização</li>
+                    <li>Manter distância segura</li>                    
+                    <li>Respeitar os horários</li>
+                    <li>Usar equipamentos obrigatórios</li>
+                    <li>Não transitar na contramão</li>
+                </ul>
+            </div>
+            
+            <div class="info-card">
+                <h3>Serviços Disponíveis</h3>
+                <ul>
+                    <li>Oficina mecânica</li>
+                    <li>Restaurante e lanchonete</li>
+                    <li>Banheiro disponíveis</li>
+                    <li>Pista Gradeada</li>
+                    <li>Estacionamento gratuito</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+            <!-- Doação de Sangue Section -->
+        <section class="blood-donation-section">
+            <div class="section-header">
+                <h2>🩸 Doe Sangue, Salve Vidas</h2>
+                <p>Informações importantes sobre doação de sangue e como você pode ajudar a salvar vidas.</p>
+            </div>
+            
+            <div class="blood-donation-content">
+                <!-- Informações Básicas -->
+                <div class="blood-info">
+                    <div class="info-card">
+                        <h3>Por que doar?</h3>
+                        <p>Uma doação pode salvar até 4 vidas. Seu gesto de solidariedade faz toda a diferença para quem precisa.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3>Requisitos para doar</h3>
+                        <ul>
+                            <li>Peso superior a 50kg</li>
+                            <li>Idade entre 16 e 69 anos</li>
+                            <li>Boa saúde geral</li>
+                            <li>Bem alimentado e descansado</li>
+                            <li>Documento com foto</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3>Onde doar em Minas Gerais</h3>
+                        <p><strong>Hemominas:</strong> Fundação Hemominas - Centro de referência em hematologia e hemoterapia</p>
+                        <p><strong>Horário:</strong> 8h às 17h</p>
+                        <a href="https://www.hemominas.mg.gov.br/" target="_blank" class="info-link">Visitar Site</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>CT do Gasolina</h3>
+                <p>Seu centro de treinamento profissional para motocross.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <ul>
+                    <li><a href="tel:+5511999999999">(31) 99753-4892</a></li>
+                    <li><a href="mailto:contato@ctdogasolina.com">contato@ctdogasolina.com</a></li>
+                    <li>WhatsApp: +55 31 9753-4892</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Localização</h4>
+                <ul>
+                    <li><a href="https://maps.app.goo.gl/N632a2Xarrrmgt3R7">Av. das Américas</a></li>
+                    <li><a href="https://maps.app.goo.gl/N632a2Xarrrmgt3R7">Bairro São Sebastião - Contagem, MG</a></li>
+                    <li><a href="https://maps.app.goo.gl/N632a2Xarrrmgt3R7">Número: 300</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Redes Sociais</h4>
+                <ul>
+                    <li><a href="https://www.instagram.com/ctgasolina_motocross?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Instagram</a></li>
+                    <li><a href="#facebook">Facebook</a></li>
+                    <li><a href="#youtube">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 CT do Gasolina. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    
+    <!-- Créditos -->
+    <div class="credits">
+        <p>Feito por <strong>Murilo Rezende</strong> | 
+           <a href="https://github.com/Murilover777" target="_blank">Github</a> | 
+           <a href="https://www.instagram.com/muriloyer/" target="_blank">@muriloyer</a> (Motocross) |
+           <a href="https://www.instagram.com/murilore_17/" target="_blank">@murilore_17</a>  
+           
+        </p>
+    </div>
+</body>
+</html>
